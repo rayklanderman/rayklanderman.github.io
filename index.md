@@ -1,65 +1,41 @@
-# Microsoft Student Ambassador Resources
+# 👋 Hi, I'm R K (DevRay)
 
-Welcome to my Microsoft Student Ambassador resource hub! As a Microsoft Student Ambassador and Community Influencer, I'm sharing curated links to help you explore Microsoft's developer ecosystem, tools, and opportunities.
+<h3 align="center">Full-time DEV | AI + ML | Fullstack | Computer Vision</h3>
 
-## 🧑‍💻 Developer Interests and Skills
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=rayklanderman&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+  <img src="https://img.shields.io/github/followers/rayklanderman?label=Followers&style=flat&color=0e75b6" alt="Followers" />
+</p>
 
-- [Azure](https://azure.microsoft.com?wt.mc_id=studentamb_487853)
-- [Azure Free](https://azure.microsoft.com/free?wt.mc_id=studentamb_487853)
-- [Azure Free for Students](https://azure.microsoft.com/free/students?wt.mc_id=studentamb_487853)
-- [Microsoft Developer](https://developer.microsoft.com?wt.mc_id=studentamb_487853)
-- [.NET](https://dotnet.microsoft.com?wt.mc_id=studentamb_487853)
-- [Learn for Developers](https://learn.microsoft.com/developer?wt.mc_id=studentamb_487853)
-- [Visual Studio Code](https://code.visualstudio.com?wt.mc_id=studentamb_487853)
-- [Microsoft Cloud Blog](https://microsoft.com/microsoft-cloud/blog?wt.mc_id=studentamb_487853)
-- [Dev Blogs](https://devblogs.microsoft.com?wt.mc_id=studentamb_487853)
+Welcome to my personal website! I'm a **Software Engineer and AI Developer** passionate about building smart, scalable solutions that merge creativity with technology. I specialize in **AI development**, **data analytics**, and **cloud computing**, and I'm deeply motivated by the potential of technology to uplift communities across Africa and beyond.
 
-## 🚀 Startups Interests and Skills
+My mission: **Build technology that understands people—and help people build better technology.**
 
-- [Microsoft for Startups](https://microsoft.com/startups?wt.mc_id=studentamb_487853)
-- [Imagine Cup](https://imaginecup.microsoft.com?wt.mc_id=studentamb_487853)
-- [Startups AI](https://microsoft.com/startups/ai?wt.mc_id=studentamb_487853)
-- [Startups Blog](https://microsoft.com/startups/blog?wt.mc_id=studentamb_487853)
-- [Learn for Startups](https://learn.microsoft.com/startups?wt.mc_id=studentamb_487853)
-- [Startups Training](https://learn.microsoft.com/training/topics/startups?wt.mc_id=studentamb_487853)
+## 🌐 Resource Hubs
 
-## 🤖 Copilot Interests and Skills
+- [**Microsoft Student Ambassador Resources**](/microsoftresources) - Curated links for developers, startups, AI, data science, and more.
 
-- [Microsoft Copilot](https://copilot.microsoft.com?wt.mc_id=studentamb_487853)
-- [Copilot for Individuals](https://microsoft.com/microsoft-copilot/for-individuals?wt.mc_id=studentamb_487853)
-- [Microsoft 365 Copilot](https://microsoft.com/microsoft-365-copilot?wt.mc_id=studentamb_487853)
-- [Copilot Learning Center](https://microsoft.com/microsoft-365/copilot-learning-center?wt.mc_id=studentamb_487853)
-- [Learn Copilot](https://learn.microsoft.com/copilot?wt.mc_id=studentamb_487853)
+*(More resource hubs coming soon!)*
 
-## 📊 Data Science Interests and Skills
+## 🌍 Connect With Me
 
-- [Microsoft Fabric](https://microsoft.com/microsoft-fabric?wt.mc_id=studentamb_487853)
-- [Fabric Community](https://community.fabric.microsoft.com?wt.mc_id=studentamb_487853)
-- [Fabric Blog](https://blog.fabric.microsoft.com?wt.mc_id=studentamb_487853)
-- [Learn Fabric](https://learn.microsoft.com/fabric?wt.mc_id=studentamb_487853)
+- 🌐 **Portfolio:** [ray-klanderman-portfolio.vercel.app](https://ray-klanderman-portfolio.vercel.app/)
+- 💼 **LinkedIn:** [Raymond Klanderman](https://www.linkedin.com/in/raymondklanderman)
+- 🐙 **GitHub:** [@rayklanderman](https://github.com/rayklanderman)
+- 🐦 **Twitter:** [@rayklanderman](https://x.com/rayklanderman)
 
-## ⚙️ Low Code Interests and Skills
+## 📊 GitHub Stats
 
-- [Power Platform](https://microsoft.com/power-platform?wt.mc_id=studentamb_487853)
-- [Learn Power BI](https://learn.microsoft.com/power-bi?wt.mc_id=studentamb_487853)
-- [Power Platform Community](https://community.powerplatform.com?wt.mc_id=studentamb_487853)
-- [Learn Power Apps](https://learn.microsoft.com/power-apps?wt.mc_id=studentamb_487853)
-- [Power BI Blog](https://powerbi.microsoft.com/blog?wt.mc_id=studentamb_487853)
-- [Learn Power Pages](https://learn.microsoft.com/power-pages?wt.mc_id=studentamb_487853)
-- [Learn Power Platform](https://learn.microsoft.com/power-platform?wt.mc_id=studentamb_487853)
-- [Learn Power Automate](https://learn.microsoft.com/power-automate?wt.mc_id=studentamb_487853)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=rayklanderman&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rayklanderman&layout=compact&theme=radical" alt="Top Languages" />
+</p>
 
-## 🎓 General Skilling and Professional Interests
-
-- [Microsoft Events](https://events.microsoft.com?wt.mc_id=studentamb_487853)
-- [Tech Community](https://techcommunity.microsoft.com?wt.mc_id=studentamb_487853)
-- [Microsoft Learn](https://learn.microsoft.com?wt.mc_id=studentamb_487853)
-- [Inside Track](https://microsoft.com/insidetrack?wt.mc_id=studentamb_487853)
-- [Microsoft Reactor](https://reactor.microsoft.com?wt.mc_id=studentamb_487853)
-- [Student Ambassadors](https://studentambassadors.microsoft.com?wt.mc_id=studentamb_487853)
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rayklanderman&theme=radical" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=rayklanderman&theme=radical" alt="Wakatime Stats" />
+</p>
 
 ---
 
-*These links are part of my Microsoft Student Ambassador journey. Feel free to explore and connect!*
-
-[Back to my GitHub Profile](https://github.com/rayklanderman)
+> "Building tools that understand people, and empowering people to build better tools." ⚙️
