@@ -26,8 +26,8 @@ My mission: **Build technology that understands people—and help people build b
 - GitHub: [@rayklanderman](https://github.com/rayklanderman)
 - LinkedIn: [Raymond Klanderman](https://www.linkedin.com/in/rayklanderman/)
 - X / Twitter: [@rayklanderman](https://x.com/rayklanderman)
-- Kaggle: [rayklanderman](https://kaggle.com/rayklanderman)
-- Hugging Face: [rayklanderman](https://huggingface.co/rayklanderman)
+- Kaggle: [devrayrob](https://www.kaggle.com/devrayrob)
+- Hugging Face: [DevRay](https://huggingface.co/DevRay)
 
 ## GitHub Stats
 
