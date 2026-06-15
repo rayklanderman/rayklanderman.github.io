@@ -1,6 +1,6 @@
-# 👋 Hi, I'm R K (DevRay)
+# Hi, I'm Ray Klanderman (DevRay)
 
-<h3 align="center">Full-time DEV | AI + ML | Fullstack | Computer Vision</h3>
+<h3 align="center">Software Engineer · Data Scientist · AI/ML Developer</h3>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=rayklanderman&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
@@ -11,20 +11,25 @@ Welcome to my personal website! I'm a **Software Engineer and AI Developer** pas
 
 My mission: **Build technology that understands people—and help people build better technology.**
 
-## 🌐 Resource Hubs
+## Resource Hubs
 
-- [**Microsoft Student Ambassador Resources**](/microsoftresources) - Curated links for developers, startups, AI, data science, and more.
+- [**AI & Machine Learning**](/resources/ai-ml/) - Curated tools and platforms for AI/ML practitioners
+- [**Developer Tools**](/resources/dev-tools/) - Cloud platforms, hosting, CI/CD, and dev utilities
+- [**Data Science**](/resources/data-science/) - Analytics, databases, notebooks, and visualization
+- [**Design & Creative**](/resources/design-creative/) - UI/UX tools, graphic design, and creative resources
+- [**Learning & Career**](/resources/learning/) - Courses, certifications, and roadmaps
+- [**Microsoft Student Ambassador Resources**](/microsoftresources/) - Azure, Copilot, Power Platform, and more
 
-*(More resource hubs coming soon!)*
+## Connect With Me
 
-## 🌍 Connect With Me
+- Portfolio: [rayklanderman.is-a.dev](https://rayklanderman.is-a.dev/)
+- GitHub: [@rayklanderman](https://github.com/rayklanderman)
+- LinkedIn: [Raymond Klanderman](https://www.linkedin.com/in/rayklanderman/)
+- X / Twitter: [@rayklanderman](https://x.com/rayklanderman)
+- Kaggle: [rayklanderman](https://kaggle.com/rayklanderman)
+- Hugging Face: [rayklanderman](https://huggingface.co/rayklanderman)
 
-- 🌐 **Portfolio:** [ray-klanderman-portfolio.vercel.app](https://ray-klanderman-portfolio.vercel.app/)
-- 💼 **LinkedIn:** [Raymond Klanderman](https://www.linkedin.com/in/raymondklanderman)
-- 🐙 **GitHub:** [@rayklanderman](https://github.com/rayklanderman)
-- 🐦 **Twitter:** [@rayklanderman](https://x.com/rayklanderman)
-
-## 📊 GitHub Stats
+## GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=rayklanderman&show_icons=true&theme=radical" alt="GitHub Stats" />

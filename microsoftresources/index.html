@@ -1,101 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsoft Student Ambassador Resources - Ray Klanderman</title>
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" type="image/svg+xml">
-    <meta property="og:title" content="Microsoft Student Ambassador Resources - Ray Klanderman">
-    <meta property="og:description" content="Curated links for Microsoft developer tools, Azure, AI, data science, and more. Part of my Student Ambassador journey.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://rayklanderman.github.io/microsoftresources/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Microsoft Student Ambassador Resources - Ray Klanderman">
-    <meta name="twitter:description" content="Curated links for Microsoft developer tools, Azure, AI, data science, and more. Part of my Student Ambassador journey.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png">
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1, h2 { color: #333; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; }
-        a { color: #007acc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .back-link { margin-top: 40px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Student Ambassador Resources — Ray Klanderman</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg">
+  <meta property="og:title" content="Microsoft Student Ambassador Resources — Ray Klanderman">
+  <meta property="og:description" content="Curated links for Microsoft developer tools, Azure, AI, data science, and more. Part of my Student Ambassador journey.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://rayklanderman.github.io/microsoftresources/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Microsoft Student Ambassador Resources — Ray Klanderman">
+  <meta name="twitter:description" content="Curated links for Microsoft developer tools, Azure, AI, data science, and more. Part of my Student Ambassador journey.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .ms-section { margin-bottom: 32px; }
+    .ms-section h2 { margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+    .ms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+    .ms-link {
+      display: block; padding: 14px 18px; border-radius: var(--radius-sm);
+      background: var(--bg-card); border: 1px solid var(--border);
+      color: var(--text-primary); font-weight: 500; transition: all 0.2s;
+    }
+    .ms-link:hover { border-color: var(--accent-light); color: var(--accent-light); transform: translateX(4px); }
+    .ms-link small { display: block; color: var(--text-secondary); font-weight: 400; font-size: 0.82rem; margin-top: 4px; }
+  </style>
 </head>
 <body>
-    <h1>Microsoft Student Ambassador Resources</h1>
-    <p>Welcome to my Microsoft Student Ambassador resource hub! As a Microsoft Student Ambassador and Community Influencer, I'm sharing curated links to help you explore Microsoft's developer ecosystem, tools, and opportunities.</p>
 
-    <h2>🧑‍💻 Developer Interests and Skills</h2>
-    <ul>
-        <li><a href="https://azure.microsoft.com?wt.mc_id=studentamb_487853">Azure</a></li>
-        <li><a href="https://azure.microsoft.com/free?wt.mc_id=studentamb_487853">Azure Free</a></li>
-        <li><a href="https://azure.microsoft.com/free/students?wt.mc_id=studentamb_487853">Azure Free for Students</a></li>
-        <li><a href="https://developer.microsoft.com?wt.mc_id=studentamb_487853">Microsoft Developer</a></li>
-        <li><a href="https://dotnet.microsoft.com?wt.mc_id=studentamb_487853">.NET</a></li>
-        <li><a href="https://learn.microsoft.com/developer?wt.mc_id=studentamb_487853">Learn for Developers</a></li>
-        <li><a href="https://code.visualstudio.com?wt.mc_id=studentamb_487853">Visual Studio Code</a></li>
-        <li><a href="https://microsoft.com/microsoft-cloud/blog?wt.mc_id=studentamb_487853">Microsoft Cloud Blog</a></li>
-        <li><a href="https://devblogs.microsoft.com?wt.mc_id=studentamb_487853">Dev Blogs</a></li>
+<nav>
+  <div class="container">
+    <a href="/" class="nav-logo">DevRay</a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/#connect">Connect</a></li>
+      <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9790;</button></li>
     </ul>
+  </div>
+</nav>
 
-    <h2>🚀 Startups Interests and Skills</h2>
-    <ul>
-        <li><a href="https://microsoft.com/startups?wt.mc_id=studentamb_487853">Microsoft for Startups</a></li>
-        <li><a href="https://imaginecup.microsoft.com?wt.mc_id=studentamb_487853">Imagine Cup</a></li>
-        <li><a href="https://microsoft.com/startups/ai?wt.mc_id=studentamb_487853">Startups AI</a></li>
-        <li><a href="https://microsoft.com/startups/blog?wt.mc_id=studentamb_487853">Startups Blog</a></li>
-        <li><a href="https://learn.microsoft.com/startups?wt.mc_id=studentamb_487853">Learn for Startups</a></li>
-        <li><a href="https://learn.microsoft.com/training/topics/startups?wt.mc_id=studentamb_487853">Startups Training</a></li>
-    </ul>
+<section class="page-header">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/resources/">Resources</a> / Microsoft</p>
+  <h1>Microsoft Student Ambassador Resources</h1>
+  <p>Welcome to my Microsoft Student Ambassador resource hub! Curated links to help you explore Microsoft's developer ecosystem, tools, and opportunities.</p>
+</section>
 
-    <h2>🤖 Copilot Interests and Skills</h2>
-    <ul>
-        <li><a href="https://copilot.microsoft.com?wt.mc_id=studentamb_487853">Microsoft Copilot</a></li>
-        <li><a href="https://microsoft.com/microsoft-copilot/for-individuals?wt.mc_id=studentamb_487853">Copilot for Individuals</a></li>
-        <li><a href="https://microsoft.com/microsoft-365-copilot?wt.mc_id=studentamb_487853">Microsoft 365 Copilot</a></li>
-        <li><a href="https://microsoft.com/microsoft-365/copilot-learning-center?wt.mc_id=studentamb_487853">Copilot Learning Center</a></li>
-        <li><a href="https://learn.microsoft.com/copilot?wt.mc_id=studentamb_487853">Learn Copilot</a></li>
-    </ul>
+<section class="section">
+  <div class="container">
 
-    <h2>📊 Data Science Interests and Skills</h2>
-    <ul>
-        <li><a href="https://microsoft.com/microsoft-fabric?wt.mc_id=studentamb_487853">Microsoft Fabric</a></li>
-        <li><a href="https://community.fabric.microsoft.com?wt.mc_id=studentamb_487853">Fabric Community</a></li>
-        <li><a href="https://blog.fabric.microsoft.com?wt.mc_id=studentamb_487853">Fabric Blog</a></li>
-        <li><a href="https://learn.microsoft.com/fabric?wt.mc_id=studentamb_487853">Learn Fabric</a></li>
-    </ul>
-
-    <h2>⚙️ Low Code Interests and Skills</h2>
-    <ul>
-        <li><a href="https://microsoft.com/power-platform?wt.mc_id=studentamb_487853">Power Platform</a></li>
-        <li><a href="https://learn.microsoft.com/power-bi?wt.mc_id=studentamb_487853">Learn Power BI</a></li>
-        <li><a href="https://community.powerplatform.com?wt.mc_id=studentamb_487853">Power Platform Community</a></li>
-        <li><a href="https://learn.microsoft.com/power-apps?wt.mc_id=studentamb_487853">Learn Power Apps</a></li>
-        <li><a href="https://powerbi.microsoft.com/blog?wt.mc_id=studentamb_487853">Power BI Blog</a></li>
-        <li><a href="https://learn.microsoft.com/power-pages?wt.mc_id=studentamb_487853">Learn Power Pages</a></li>
-        <li><a href="https://learn.microsoft.com/power-platform?wt.mc_id=studentamb_487853">Learn Power Platform</a></li>
-        <li><a href="https://learn.microsoft.com/power-automate?wt.mc_id=studentamb_487853">Learn Power Automate</a></li>
-    </ul>
-
-    <h2>🎓 General Skilling and Professional Interests</h2>
-    <ul>
-        <li><a href="https://events.microsoft.com?wt.mc_id=studentamb_487853">Microsoft Events</a></li>
-        <li><a href="https://techcommunity.microsoft.com?wt.mc_id=studentamb_487853">Tech Community</a></li>
-        <li><a href="https://learn.microsoft.com?wt.mc_id=studentamb_487853">Microsoft Learn</a></li>
-        <li><a href="https://microsoft.com/insidetrack?wt.mc_id=studentamb_487853">Inside Track</a></li>
-        <li><a href="https://reactor.microsoft.com?wt.mc_id=studentamb_487853">Microsoft Reactor</a></li>
-        <li><a href="https://studentambassadors.microsoft.com?wt.mc_id=studentamb_487853">Student Ambassadors</a></li>
-    </ul>
-
-    <p><em>These links are part of my Microsoft Student Ambassador journey. Feel free to explore and connect!</em></p>
-
-    <div class="back-link">
-        <a href="https://rayklanderman.github.io">← Back to Main Site</a>
+    <div class="ms-section">
+      <h2>&#128187; Developer Interests and Skills</h2>
+      <div class="ms-grid">
+        <a class="ms-link" href="https://azure.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Azure <small>Cloud computing platform</small></a>
+        <a class="ms-link" href="https://azure.microsoft.com/free?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Azure Free <small>Free cloud services</small></a>
+        <a class="ms-link" href="https://azure.microsoft.com/free/students?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Azure Free for Students <small>$100 credit, no credit card</small></a>
+        <a class="ms-link" href="https://developer.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Microsoft Developer <small>Dev tools and resources</small></a>
+        <a class="ms-link" href="https://dotnet.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">.NET <small>Cross-platform framework</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com/developer?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Learn for Developers <small>Learning paths</small></a>
+        <a class="ms-link" href="https://code.visualstudio.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Visual Studio Code <small>Free code editor</small></a>
+        <a class="ms-link" href="https://microsoft.com/microsoft-cloud/blog?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Microsoft Cloud Blog <small>Cloud news and updates</small></a>
+        <a class="ms-link" href="https://devblogs.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Dev Blogs <small>Engineering blogs</small></a>
+      </div>
     </div>
+
+    <div class="ms-section">
+      <h2>&#128640; Startups Interests and Skills</h2>
+      <div class="ms-grid">
+        <a class="ms-link" href="https://microsoft.com/startups?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Microsoft for Startups <small>Resources for founders</small></a>
+        <a class="ms-link" href="https://imaginecup.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Imagine Cup <small>Student tech competition</small></a>
+        <a class="ms-link" href="https://microsoft.com/startups/ai?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Startups AI <small>AI for startups</small></a>
+        <a class="ms-link" href="https://microsoft.com/startups/blog?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Startups Blog <small>Startup stories</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com/startups?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Learn for Startups <small>Learning paths</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com/training/topics/startups?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Startups Training <small>Training modules</small></a>
+      </div>
+    </div>
+
+    <div class="ms-section">
+      <h2>&#129302; Copilot Interests and Skills</h2>
+      <div class="ms-grid">
+        <a class="ms-link" href="https://copilot.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Microsoft Copilot <small>AI assistant</small></a>
+        <a class="ms-link" href="https://microsoft.com/microsoft-copilot/for-individuals?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Copilot for Individuals <small>Personal AI</small></a>
+        <a class="ms-link" href="https://microsoft.com/microsoft-365-copilot?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Microsoft 365 Copilot <small>AI in Office</small></a>
+        <a class="ms-link" href="https://microsoft.com/microsoft-365/copilot-learning-center?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Copilot Learning Center <small>Learn Copilot</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com/copilot?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Learn Copilot <small>Documentation</small></a>
+      </div>
+    </div>
+
+    <div class="ms-section">
+      <h2>&#128200; Data Science Interests and Skills</h2>
+      <div class="ms-grid">
+        <a class="ms-link" href="https://microsoft.com/microsoft-fabric?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Microsoft Fabric <small>Unified analytics</small></a>
+        <a class="ms-link" href="https://community.fabric.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Fabric Community <small>Community forum</small></a>
+        <a class="ms-link" href="https://blog.fabric.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Fabric Blog <small>Updates and tips</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com/fabric?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Learn Fabric <small>Learning paths</small></a>
+      </div>
+    </div>
+
+    <div class="ms-section">
+      <h2>&#9881;&#65039; Low Code Interests and Skills</h2>
+      <div class="ms-grid">
+        <a class="ms-link" href="https://microsoft.com/power-platform?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Power Platform <small>Low-code platform</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com/power-bi?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Learn Power BI <small>BI and analytics</small></a>
+        <a class="ms-link" href="https://community.powerplatform.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Power Platform Community <small>Community</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com/power-apps?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Learn Power Apps <small>App building</small></a>
+        <a class="ms-link" href="https://powerbi.microsoft.com/blog?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Power BI Blog <small>Blog</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com/power-pages?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Learn Power Pages <small>Websites</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com/power-platform?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Learn Power Platform <small>Learning paths</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com/power-automate?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Learn Power Automate <small>Automation</small></a>
+      </div>
+    </div>
+
+    <div class="ms-section">
+      <h2>&#127891; General Skilling and Professional Interests</h2>
+      <div class="ms-grid">
+        <a class="ms-link" href="https://events.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Microsoft Events <small>Webinars and events</small></a>
+        <a class="ms-link" href="https://techcommunity.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Tech Community <small>Community forums</small></a>
+        <a class="ms-link" href="https://learn.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Microsoft Learn <small>Free learning platform</small></a>
+        <a class="ms-link" href="https://microsoft.com/insidetrack?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Inside Track <small>Insider program</small></a>
+        <a class="ms-link" href="https://reactor.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Microsoft Reactor <small>Developer events</small></a>
+        <a class="ms-link" href="https://studentambassadors.microsoft.com?wt.mc_id=studentamb_487853" target="_blank" rel="noopener">Student Ambassadors <small>Program info</small></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><em>These links are part of my Microsoft Student Ambassador journey. Feel free to explore and connect!</em></p>
+    <p style="margin-top: 8px;">&#169; 2026 Ray Klanderman — <a href="/">Back to Main Site</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+const saved = localStorage.getItem('theme');
+if (saved) document.documentElement.setAttribute('data-theme', saved);
+</script>
+
 </body>
 </html>

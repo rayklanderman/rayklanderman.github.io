@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Ray Klanderman</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg">
+  <meta property="og:title" content="About — Ray Klanderman">
+  <meta property="og:description" content="Software Engineer, Data Scientist, and AI/ML Developer passionate about building smart, scalable solutions.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png">
+  <meta property="og:url" content="https://rayklanderman.github.io/about/">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="nav-logo">DevRay</a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/#connect">Connect</a></li>
+      <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9790;</button></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-header">
+  <p class="breadcrumb"><a href="/">Home</a> / About</p>
+  <h1>About Me</h1>
+  <p>Full-time DEV &middot; AI + ML &middot; Fullstack &middot; Computer Vision &middot; Creative Technologist</p>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 750px;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <img src="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png" alt="Dev Tips" style="border-radius: var(--radius); max-width: 400px; box-shadow: var(--shadow);">
+    </div>
+
+    <div style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8;">
+      <p style="margin-bottom: 20px;">
+        I'm <strong>Ray Klanderman</strong> (DevRay), a <strong>Software Engineer and AI Developer</strong> passionate
+        about building smart, scalable solutions that merge creativity with technology.
+      </p>
+
+      <p style="margin-bottom: 20px;">
+        I specialize in <strong>AI development</strong>, <strong>data analytics</strong>, and <strong>cloud computing</strong>.
+        My work spans the full stack&mdash;from designing intuitive user interfaces to training deep learning models and
+        deploying scalable cloud infrastructure.
+      </p>
+
+      <p style="margin-bottom: 20px;">
+        As a <strong>Microsoft Student Ambassador</strong>, I'm deeply involved in the developer community, sharing
+        knowledge and curating resources to help others grow in their tech careers.
+      </p>
+
+      <p style="margin-bottom: 20px;">
+        I'm deeply motivated by the potential of technology to uplift communities across Africa and beyond.
+        My mission is to <em>build technology that understands people&mdash;and help people build better technology.</em>
+      </p>
+
+      <p style="margin-bottom: 20px;">
+        Currently exploring: advanced computer vision architectures, LLM-powered applications, and creative coding
+        at the intersection of art and technology.
+      </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/projects/" class="btn btn-primary">View My Projects</a>
+      <a href="/resources/" class="btn btn-outline">Explore Resources</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&#169; 2026 Ray Klanderman — Building technology that understands people.</p>
+  </div>
+</footer>
+
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+const saved = localStorage.getItem('theme');
+if (saved) document.documentElement.setAttribute('data-theme', saved);
+</script>
+
+</body>
+</html>

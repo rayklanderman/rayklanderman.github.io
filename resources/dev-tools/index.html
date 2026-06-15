@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Tools & Cloud — Ray Klanderman</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg">
+  <meta property="og:title" content="Developer Tools & Cloud — Ray Klanderman">
+  <meta property="og:description" content="Curated developer tools, cloud platforms, and hosting services with free tiers.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png">
+  <meta property="og:url" content="https://rayklanderman.github.io/resources/dev-tools/">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="nav-logo">DevRay</a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/#connect">Connect</a></li>
+      <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9790;</button></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-header">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/resources/">Resources</a> / Dev Tools</p>
+  <h1>Developer Tools & Cloud</h1>
+  <p>Cloud platforms, hosting, CI/CD, version control, databases, and essential dev utilities.</p>
+</section>
+
+<section class="section">
+  <div class="container">
+    <ul class="resource-list">
+
+      <li class="resource-item">
+        <span class="emoji">&#128187;</span>
+        <div>
+          <h4><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></h4>
+          <p>Unlimited public/private repos with CI/CD (Actions), static hosting (Pages), containers, and project management.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#128187;</span>
+        <div>
+          <h4><a href="https://gitlab.com/" target="_blank" rel="noopener">GitLab</a></h4>
+          <p>Unlimited public/private repos with built-in CI/CD, container registry, and static hosting. Up to 5 collaborators.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#9729;&#65039;</span>
+        <div>
+          <h4><a href="https://vercel.com/" target="_blank" rel="noopener">Vercel</a></h4>
+          <p>Host static sites and serverless functions with a generous free tier. Native support for Next.js, React, and more.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#127760;</span>
+        <div>
+          <h4><a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a></h4>
+          <p>Static hosting with form handling, serverless functions, split testing, and free SSL. 100GB bandwidth included.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#9925;</span>
+        <div>
+          <h4><a href="https://www.cloudflare.com/" target="_blank" rel="noopener">Cloudflare</a></h4>
+          <p>Free CDN, DDoS protection, DNS, SSL, Workers (serverless), Pages (hosting), R2 storage, and D1 database.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#127760;</span>
+        <div>
+          <h4><a href="https://azure.microsoft.com/free/" target="_blank" rel="noopener">Microsoft Azure Free Tier</a></h4>
+          <p>$200 credit for 30 days + always-free services: 1 B1S VM, 10 web apps, Functions, Cosmos DB 25GB, and more.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#127760;</span>
+        <div>
+          <h4><a href="https://aws.amazon.com/free/" target="_blank" rel="noopener">AWS Free Tier</a></h4>
+          <p>12 months free: t2.micro EC2, 5GB S3, 1M Lambda requests, 25GB DynamoDB, and 750 hrs RDS. Plus always-free offers.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#127760;</span>
+        <div>
+          <h4><a href="https://www.oracle.com/cloud/free/" target="_blank" rel="noopener">Oracle Cloud Free Tier</a></h4>
+          <p>Always-free: 2 AMD VMs, 4 Arm cores/24GB RAM, 200GB storage, 10TB egress. Best free cloud compute offering.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#128451;</span>
+        <div>
+          <h4><a href="https://render.com/" target="_blank" rel="noopener">Render</a></h4>
+          <p>Unified cloud for static sites, web services, and databases. Free tier includes static sites and PostgreSQL.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#128646;</span>
+        <div>
+          <h4><a href="https://railway.app/" target="_blank" rel="noopener">Railway</a></h4>
+          <p>Full-stack hosting platform. Free tier with $5 credit/month for deploying apps and databases.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#128451;</span>
+        <div>
+          <h4><a href="https://supabase.com/" target="_blank" rel="noopener">Supabase</a></h4>
+          <p>Open-source Firebase alternative. PostgreSQL database with real-time subscriptions, auth, and storage. 2 free projects.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#127794;</span>
+        <div>
+          <h4><a href="https://www.mongodb.com/atlas" target="_blank" rel="noopener">MongoDB Atlas</a></h4>
+          <p>Free shared cluster with 512MB storage. Great for NoSQL database needs in fullstack projects.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#127760;</span>
+        <div>
+          <h4><a href="https://pages.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Pages</a></h4>
+          <p>Deploy static sites with 500 monthly builds, 100 custom domains, free SSL, and Workers integration.</p>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="emoji">&#128640;</span>
+        <div>
+          <h4><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a></h4>
+          <p>Free, open-source code editor from Microsoft. Extensive extension ecosystem for every language and framework.</p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&#169; 2026 Ray Klanderman — Building technology that understands people.</p>
+  </div>
+</footer>
+
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+const saved = localStorage.getItem('theme');
+if (saved) document.documentElement.setAttribute('data-theme', saved);
+</script>
+
+</body>
+</html>
