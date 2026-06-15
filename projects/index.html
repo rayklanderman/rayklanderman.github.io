@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Ray Klanderman</title>
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg">
   <meta property="og:title" content="Projects — Ray Klanderman">
-  <meta property="og:description" content="Software, AI/ML, data science, and creative projects by Ray Klanderman.">
+  <meta property="og:description" content="AI engineering, data science, and full-stack projects by Ray Klanderman.">
   <meta property="og:image" content="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png">
   <meta property="og:url" content="https://rayklanderman.github.io/projects/">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
 <nav>
   <div class="container">
-    <a href="/" class="nav-logo">DevRay</a>
+    <a href="/" class="nav-logo">Ray Klanderman</a>
     <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/resources/">Resources</a></li>
       <li><a href="/#connect">Connect</a></li>
-      <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9790;</button></li>
+      <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9681;</button></li>
     </ul>
   </div>
 </nav>
@@ -33,79 +33,229 @@
 <section class="page-header">
   <p class="breadcrumb"><a href="/">Home</a> / Projects</p>
   <h1>Projects</h1>
-  <p>Showcasing my work across AI/ML, fullstack, data science, and creative technology.</p>
+  <p>AI engineering, data science, full-stack applications, and creative technology.</p>
 </section>
 
 <section class="section">
   <div class="container">
-
-    <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px;">
-      <span class="tag tag-ai" style="padding: 6px 16px; font-size: 0.85rem;">AI / ML</span>
-      <span class="tag tag-fullstack" style="padding: 6px 16px; font-size: 0.85rem;">Fullstack</span>
-      <span class="tag tag-data" style="padding: 6px 16px; font-size: 0.85rem;">Data Science</span>
-      <span class="tag tag-creative" style="padding: 6px 16px; font-size: 0.85rem;">Creative</span>
-      <span class="tag tag-web" style="padding: 6px 16px; font-size: 0.85rem;">Web</span>
-    </div>
-
     <div class="card-grid">
 
       <div class="card">
-        <span class="card-icon">&#129302;</span>
-        <h3>AI-Powered Analytics Platform</h3>
-        <p>Machine learning platform that enables natural language querying of datasets with predictive analytics and automated insight generation.</p>
+        <div class="card-header">
+          <span class="card-icon ai">L</span>
+          <div>
+            <h3>Luminae</h3>
+            <p>Autonomous research analysis platform with multi-agent AI swarm. Uses Mistral AI, FastAPI, and Supabase for scalable research automation.</p>
+          </div>
+        </div>
         <div class="card-tags">
-          <span class="tag tag-ai">AI/ML</span>
-          <span class="tag tag-fullstack">Fullstack</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Mistral AI</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Python</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Redis</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
-        <span class="card-icon">&#128202;</span>
-        <h3>Interactive Data Dashboard</h3>
-        <p>Real-time data exploration dashboard with interactive charts, filters, and export capabilities for data-driven decision making.</p>
+        <div class="card-header">
+          <span class="card-icon health">H</span>
+          <div>
+            <h3>AI Health Chat</h3>
+            <p>AI-powered healthcare consultation platform built with Next.js and xAI Grok, providing accessible health information.</p>
+          </div>
+        </div>
         <div class="card-tags">
-          <span class="tag tag-data">Data Science</span>
-          <span class="tag tag-web">Web</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">xAI</span>
+          <span class="tag">Grok</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
-        <span class="card-icon">&#128065;</span>
-        <h3>Computer Vision Pipeline</h3>
-        <p>Real-time object detection and image classification system built with deep learning frameworks. Supports video streams and batch processing.</p>
+        <div class="card-header">
+          <span class="card-icon data">M</span>
+          <div>
+            <h3>Movie Recommendation Project 2026</h3>
+            <p>ML-powered movie rating predictor achieving RMSE ~0.82 using LightGBM and scikit-learn with extensive feature engineering.</p>
+          </div>
+        </div>
         <div class="card-tags">
-          <span class="tag tag-ai">AI/ML</span>
-          <span class="tag tag-data">Computer Vision</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Data Science</span>
+          <span class="tag">Python</span>
+          <span class="tag">LightGBM</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">SciPy</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
-        <span class="card-icon">&#128187;</span>
-        <h3>Fullstack Web Application</h3>
-        <p>Scalable web application with modern frontend, RESTful API backend, cloud database integration, and CI/CD deployment pipeline.</p>
+        <div class="card-header">
+          <span class="card-icon web">L</span>
+          <div>
+            <h3>Live Interviewer</h3>
+            <p>AI-powered interview question generator with premium UI built in Next.js 16, Framer Motion animations, and Mistral AI integration.</p>
+          </div>
+        </div>
         <div class="card-tags">
-          <span class="tag tag-fullstack">Fullstack</span>
-          <span class="tag tag-web">Web</span>
+          <span class="tag">Next.js 16</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Tailwind CSS v4</span>
+          <span class="tag">Framer Motion</span>
+          <span class="tag">Mistral AI</span>
+          <span class="tag">Groq</span>
+          <span class="tag">PWA</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
-        <span class="card-icon">&#127912;</span>
-        <h3>Creative Portfolio Generator</h3>
-        <p>Dynamic portfolio builder with customizable themes, project showcase components, and one-click deployment to GitHub Pages.</p>
+        <div class="card-header">
+          <span class="card-icon creative">C</span>
+          <div>
+            <h3>Content Shapeshifter Pro</h3>
+            <p>Transform any content into platform-optimized posts using AI. Supports multiple output formats and social platforms.</p>
+          </div>
+        </div>
         <div class="card-tags">
-          <span class="tag tag-creative">Creative</span>
-          <span class="tag tag-web">Web</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Groq</span>
+          <span class="tag">Cheerio</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
-        <span class="card-icon">&#128269;</span>
-        <h3>NLP Text Analysis Toolkit</h3>
-        <p>Natural language processing toolkit for sentiment analysis, entity recognition, text summarization, and language detection.</p>
+        <div class="card-header">
+          <span class="card-icon health">S</span>
+          <div>
+            <h3>SerenityAI</h3>
+            <p>AI-powered mental wellness companion built with React, TypeScript, and Groq API. Features LLM architecture with AI agent support.</p>
+          </div>
+        </div>
         <div class="card-tags">
-          <span class="tag tag-ai">AI/ML</span>
-          <span class="tag tag-data">NLP</span>
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">JacLang</span>
+          <span class="tag">Groq API</span>
+          <span class="tag">LLM Architecture</span>
+          <span class="tag">AI Agents</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon edu">T</span>
+          <div>
+            <h3>TutaLearn &mdash; African Educational Platform</h3>
+            <p>AI-powered educational PWA for African students. Integrates WhatsApp API for accessible learning across low-bandwidth environments.</p>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Groq API</span>
+          <span class="tag">PWA</span>
+          <span class="tag">WhatsApp API</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon dev">C</span>
+          <div>
+            <h3>Codebase Genius &mdash; AI Documentation System</h3>
+            <p>AI-powered platform for automatic GitHub documentation generation using Google Gemini API, Streamlit, and NetworkX.</p>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Google Gemini API</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">NetworkX</span>
+          <span class="tag">FastAPI</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon media">W</span>
+          <div>
+            <h3>Weru Digital</h3>
+            <p>Android app for Weru TV and FM streaming. Cross-platform PWA with live streaming, AI features, and SEO optimization.</p>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag">WordPress</span>
+          <span class="tag">PWA</span>
+          <span class="tag">Live Streaming</span>
+          <span class="tag">AI</span>
+          <span class="tag">SEO</span>
+          <span class="tag">RSS</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
+          <a href="#" target="_blank" rel="noopener">Google Play &rarr;</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon jobs">K</span>
+          <div>
+            <h3>Kazi Connect</h3>
+            <p>AI-powered job matching platform built with Next.js and Firebase. Connects job seekers to opportunities using intelligent matching.</p>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">OpenAI</span>
+          <span class="tag">PWA</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
@@ -115,7 +265,7 @@
 
 <footer>
   <div class="container">
-    <p>&#169; 2026 Ray Klanderman — Building technology that understands people.</p>
+    <p>&copy; 2026 Ray Klanderman &mdash; Building technology that understands people.</p>
   </div>
 </footer>
 
