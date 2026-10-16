@@ -3,6 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects by Ray Klanderman — AI engineering, data science, and full-stack applications.">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
   <title>Projects — Ray Klanderman</title>
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg">
   <meta property="og:title" content="Projects — Ray Klanderman">
@@ -17,18 +32,22 @@
 </head>
 <body>
 
-<nav>
+<nav aria-label="Main navigation">
   <div class="container">
     <a href="/" class="nav-logo">Ray Klanderman</a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/about/">About</a></li>
+      <li><a href="/#skills">Skills</a></li>
+      <li><a href="/projects/" aria-current="page">Projects</a></li>
       <li><a href="/resources/">Resources</a></li>
-      <li><a href="/#connect">Connect</a></li>
-      <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9681;</button></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">&#9681;</button></li>
     </ul>
   </div>
 </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<main id="main">
 
 <section class="page-header">
   <p class="breadcrumb"><a href="/">Home</a> / Projects</p>
@@ -42,7 +61,7 @@
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon ai">L</span>
+          <span class="card-icon ai" aria-hidden="true">L</span>
           <div>
             <h3>Luminae</h3>
             <p>Autonomous research analysis platform with multi-agent AI swarm. Uses Mistral AI, FastAPI, and Supabase for scalable research automation.</p>
@@ -59,14 +78,14 @@
           <span class="tag">Redis</span>
         </div>
         <div class="card-links">
-          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <span class="link-disabled" title="Live demo URL not published yet">Live demo coming soon</span>
           <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon health">H</span>
+          <span class="card-icon health" aria-hidden="true">H</span>
           <div>
             <h3>AI Health Chat</h3>
             <p>AI-powered healthcare consultation platform built with Next.js and xAI Grok, providing accessible health information.</p>
@@ -80,14 +99,14 @@
           <span class="tag">Grok</span>
         </div>
         <div class="card-links">
-          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <span class="link-disabled" title="Live demo URL not published yet">Live demo coming soon</span>
           <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon data">M</span>
+          <span class="card-icon data" aria-hidden="true">M</span>
           <div>
             <h3>Movie Recommendation Project 2026</h3>
             <p>ML-powered movie rating predictor achieving RMSE ~0.82 using LightGBM and scikit-learn with extensive feature engineering.</p>
@@ -110,7 +129,7 @@
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon web">L</span>
+          <span class="card-icon web" aria-hidden="true">L</span>
           <div>
             <h3>Live Interviewer</h3>
             <p>AI-powered interview question generator with premium UI built in Next.js 16, Framer Motion animations, and Mistral AI integration.</p>
@@ -132,7 +151,7 @@
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon creative">C</span>
+          <span class="card-icon creative" aria-hidden="true">C</span>
           <div>
             <h3>Content Shapeshifter Pro</h3>
             <p>Transform any content into platform-optimized posts using AI. Supports multiple output formats and social platforms.</p>
@@ -152,7 +171,7 @@
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon health">S</span>
+          <span class="card-icon health" aria-hidden="true">S</span>
           <div>
             <h3>SerenityAI</h3>
             <p>AI-powered mental wellness companion built with React, TypeScript, and Groq API. Features LLM architecture with AI agent support.</p>
@@ -167,14 +186,14 @@
           <span class="tag">AI Agents</span>
         </div>
         <div class="card-links">
-          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <span class="link-disabled" title="Live demo URL not published yet">Live demo coming soon</span>
           <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon edu">T</span>
+          <span class="card-icon edu" aria-hidden="true">T</span>
           <div>
             <h3>TutaLearn &mdash; African Educational Platform</h3>
             <p>AI-powered educational PWA for African students. Integrates WhatsApp API for accessible learning across low-bandwidth environments.</p>
@@ -188,14 +207,14 @@
           <span class="tag">WhatsApp API</span>
         </div>
         <div class="card-links">
-          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <span class="link-disabled" title="Live demo URL not published yet">Live demo coming soon</span>
           <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon dev">C</span>
+          <span class="card-icon dev" aria-hidden="true">C</span>
           <div>
             <h3>Codebase Genius &mdash; AI Documentation System</h3>
             <p>AI-powered platform for automatic GitHub documentation generation using Google Gemini API, Streamlit, and NetworkX.</p>
@@ -210,14 +229,14 @@
           <span class="tag">FastAPI</span>
         </div>
         <div class="card-links">
-          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <span class="link-disabled" title="Live demo URL not published yet">Live demo coming soon</span>
           <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon media">W</span>
+          <span class="card-icon media" aria-hidden="true">W</span>
           <div>
             <h3>Weru Digital</h3>
             <p>Android app for Weru TV and FM streaming. Cross-platform PWA with live streaming, AI features, and SEO optimization.</p>
@@ -232,15 +251,15 @@
           <span class="tag">RSS</span>
         </div>
         <div class="card-links">
-          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <span class="link-disabled" title="Live demo URL not published yet">Live demo coming soon</span>
           <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
-          <a href="#" target="_blank" rel="noopener">Google Play &rarr;</a>
+          <span class="link-disabled" title="Google Play listing not published yet">Google Play coming soon</span>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon jobs">K</span>
+          <span class="card-icon jobs" aria-hidden="true">K</span>
           <div>
             <h3>Kazi Connect</h3>
             <p>AI-powered job matching platform built with Next.js and Firebase. Connects job seekers to opportunities using intelligent matching.</p>
@@ -254,7 +273,7 @@
           <span class="tag">PWA</span>
         </div>
         <div class="card-links">
-          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <span class="link-disabled" title="Live demo URL not published yet">Live demo coming soon</span>
           <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
@@ -263,6 +282,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <p>&copy; 2026 Ray Klanderman &mdash; Building technology that understands people.</p>
@@ -270,14 +290,38 @@
 </footer>
 
 <script>
-function toggleTheme() {
-  const html = document.documentElement;
-  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-}
-const saved = localStorage.getItem('theme');
-if (saved) document.documentElement.setAttribute('data-theme', saved);
+(function () {
+  var html = document.documentElement;
+  var themeBtn = document.getElementById('theme-toggle');
+  function syncLabel() {
+    if (!themeBtn) return;
+    var dark = html.getAttribute('data-theme') === 'dark';
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    themeBtn.textContent = dark ? '\u2600' : '\u25D1';
+  }
+  if (themeBtn) themeBtn.addEventListener('click', function () {
+    var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    syncLabel();
+  });
+  syncLabel();
+  var menuBtn = document.getElementById('menu-toggle');
+  var links = document.getElementById('nav-links');
+  if (menuBtn && links) {
+    menuBtn.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    links.addEventListener('click', function (e) {
+      if (e.target.closest('a')) { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+})();
 </script>
 
 </body>

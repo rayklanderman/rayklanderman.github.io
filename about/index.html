@@ -3,6 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Ray Klanderman — Software Engineer, Data Scientist, and AI/ML Developer.">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
   <title>About — Ray Klanderman</title>
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg">
   <meta property="og:title" content="About — Ray Klanderman">
@@ -17,19 +32,22 @@
 </head>
 <body>
 
-<nav>
+<nav aria-label="Main navigation">
   <div class="container">
-    <a href="/" class="nav-logo">DevRay</a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
+    <a href="/" class="nav-logo">Ray Klanderman</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/about/" aria-current="page">About</a></li>
+      <li><a href="/#skills">Skills</a></li>
       <li><a href="/projects/">Projects</a></li>
       <li><a href="/resources/">Resources</a></li>
-      <li><a href="/#connect">Connect</a></li>
-      <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9681;</button></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">&#9681;</button></li>
     </ul>
   </div>
 </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<main id="main">
 
 <section class="page-header">
   <p class="breadcrumb"><a href="/">Home</a> / About</p>
@@ -38,46 +56,47 @@
 </section>
 
 <section class="section">
-  <div class="container" style="max-width: 750px;">
-    <div style="text-align: center; margin-bottom: 40px;">
-      <img src="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png" alt="Dev Tips" style="border-radius: var(--radius); max-width: 400px; box-shadow: var(--shadow);">
+  <div class="container narrow">
+    <div class="center mb-40">
+      <img class="about-photo" src="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png" alt="Dev Tips by Ray Klanderman" loading="lazy" decoding="async" width="400">
     </div>
 
-    <div style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8;">
-      <p style="margin-bottom: 20px;">
+    <div class="prose">
+      <p>
         I'm <strong>Ray Klanderman</strong> (DevRay), a <strong>Software Engineer and AI Developer</strong> passionate
         about building smart, scalable solutions that merge creativity with technology.
       </p>
 
-      <p style="margin-bottom: 20px;">
+      <p>
         I specialize in <strong>AI development</strong>, <strong>data analytics</strong>, and <strong>cloud computing</strong>.
         My work spans the full stack&mdash;from designing intuitive user interfaces to training deep learning models and
         deploying scalable cloud infrastructure.
       </p>
 
-      <p style="margin-bottom: 20px;">
+      <p>
         As a <strong>Microsoft Student Ambassador</strong>, I'm deeply involved in the developer community, sharing
         knowledge and curating resources to help others grow in their tech careers.
       </p>
 
-      <p style="margin-bottom: 20px;">
+      <p>
         I'm deeply motivated by the potential of technology to uplift communities across Africa and beyond.
         My mission is to <em>build technology that understands people&mdash;and help people build better technology.</em>
       </p>
 
-      <p style="margin-bottom: 20px;">
+      <p>
         Currently exploring: advanced computer vision architectures, LLM-powered applications, and creative coding
         at the intersection of art and technology.
       </p>
     </div>
 
-    <div style="text-align: center; margin-top: 40px;">
+    <div class="center mt-40">
       <a href="/projects/" class="btn btn-primary">View My Projects</a>
       <a href="/resources/" class="btn btn-outline">Explore Resources</a>
     </div>
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <p>&#169; 2026 Ray Klanderman — Building technology that understands people.</p>
@@ -85,14 +104,38 @@
 </footer>
 
 <script>
-function toggleTheme() {
-  const html = document.documentElement;
-  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-}
-const saved = localStorage.getItem('theme');
-if (saved) document.documentElement.setAttribute('data-theme', saved);
+(function () {
+  var html = document.documentElement;
+  var themeBtn = document.getElementById('theme-toggle');
+  function syncLabel() {
+    if (!themeBtn) return;
+    var dark = html.getAttribute('data-theme') === 'dark';
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    themeBtn.textContent = dark ? '\u2600' : '\u25D1';
+  }
+  if (themeBtn) themeBtn.addEventListener('click', function () {
+    var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    syncLabel();
+  });
+  syncLabel();
+  var menuBtn = document.getElementById('menu-toggle');
+  var links = document.getElementById('nav-links');
+  if (menuBtn && links) {
+    menuBtn.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    links.addEventListener('click', function (e) {
+      if (e.target.closest('a')) { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+})();
 </script>
 
 </body>

@@ -3,6 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free design and creative tools, fonts, and assets curated by Ray Klanderman.">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
   <title>Design & Creative Resources — Ray Klanderman</title>
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg">
   <meta property="og:title" content="Design & Creative Resources — Ray Klanderman">
@@ -17,19 +32,22 @@
 </head>
 <body>
 
-<nav>
+<nav aria-label="Main navigation">
   <div class="container">
-    <a href="/" class="nav-logo">DevRay</a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/resources/">Resources</a></li>
+    <a href="/" class="nav-logo">Ray Klanderman</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/about/">About</a></li>
+      <li><a href="/#skills">Skills</a></li>
       <li><a href="/projects/">Projects</a></li>
-      <li><a href="/#connect">Connect</a></li>
-      <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9681;</button></li>
+      <li><a href="/resources/" aria-current="page">Resources</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">&#9681;</button></li>
     </ul>
   </div>
 </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<main id="main">
 
 <section class="page-header">
   <p class="breadcrumb"><a href="/">Home</a> / <a href="/resources/">Resources</a> / Design & Creative</p>
@@ -141,6 +159,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <p>&#169; 2026 Ray Klanderman — Building technology that understands people.</p>
@@ -148,14 +167,38 @@
 </footer>
 
 <script>
-function toggleTheme() {
-  const html = document.documentElement;
-  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-}
-const saved = localStorage.getItem('theme');
-if (saved) document.documentElement.setAttribute('data-theme', saved);
+(function () {
+  var html = document.documentElement;
+  var themeBtn = document.getElementById('theme-toggle');
+  function syncLabel() {
+    if (!themeBtn) return;
+    var dark = html.getAttribute('data-theme') === 'dark';
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    themeBtn.textContent = dark ? '\u2600' : '\u25D1';
+  }
+  if (themeBtn) themeBtn.addEventListener('click', function () {
+    var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    syncLabel();
+  });
+  syncLabel();
+  var menuBtn = document.getElementById('menu-toggle');
+  var links = document.getElementById('nav-links');
+  if (menuBtn && links) {
+    menuBtn.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    links.addEventListener('click', function (e) {
+      if (e.target.closest('a')) { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+})();
 </script>
 
 </body>

@@ -45,11 +45,6 @@ My mission: **Build technology that understands people—and help people build b
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rayklanderman&layout=compact&theme=default&hide_border=true" alt="Top Languages">
 </p>
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rayklanderman&theme=default&hide_border=true" alt="GitHub Streak">
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=rayklanderman&theme=default&hide_border=true" alt="WakaTime Stats">
-</p>
-
 ---
 
 > "Building tools that understand people, and empowering people to build better tools." ⚙️

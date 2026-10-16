@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ray Klanderman — Software & AI Engineer</title>
+  <meta name="description" content="Ray Klanderman — Software Engineer and AI Engineer building production-grade RAG systems, autonomous agents, and full-stack apps.">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg">
   <meta property="og:title" content="Ray Klanderman — Software & AI Engineer">
   <meta property="og:description" content="Software engineer and AI engineer building production-grade AI systems, full-stack apps, and human-centered tools.">
@@ -22,28 +37,31 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<nav>
+<nav aria-label="Main navigation">
   <div class="container">
-    <a href="/" class="nav-logo">Ray Klanderman</a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
-    <ul class="nav-links">
-      <li><a href="/#about">About</a></li>
+    <a href="/" class="nav-logo" aria-current="page">Ray Klanderman</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/about/">About</a></li>
       <li><a href="/#skills">Skills</a></li>
       <li><a href="/projects/">Projects</a></li>
       <li><a href="/resources/">Resources</a></li>
-      <li><a href="/#connect">Connect</a></li>
-      <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9681;</button></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">&#9681;</button></li>
     </ul>
   </div>
 </nav>
 
+<main id="main">
+
 <section class="hero">
   <div class="hero-content">
     <div class="badge-group">
-      <img src="https://img.shields.io/github/followers/rayklanderman?label=Followers&style=flat" alt="Followers">
-      <img src="https://img.shields.io/badge/WakaTime-Active-blue" alt="WakaTime">
-      <img src="https://komarev.com/ghpvc/?username=rayklanderman&label=Visitors" alt="Visitors">
+      <img src="https://img.shields.io/github/followers/rayklanderman?label=Followers&style=flat" alt="GitHub followers" height="20" loading="eager">
+      <img src="https://img.shields.io/badge/WakaTime-Active-blue" alt="WakaTime active" height="20" loading="eager">
+      <img src="https://komarev.com/ghpvc/?username=rayklanderman&label=Visitors" alt="Profile visitors" height="20" loading="eager">
     </div>
     <h1>Ray Klanderman</h1>
     <p class="subtitle">Software Engineer &middot; AI Engineer</p>
@@ -59,8 +77,8 @@
   <div class="container">
     <h2 class="section-title">About</h2>
     <p class="section-desc">Software Engineer &middot; AI Engineer &middot; Data Analyst &middot; Fullstack Developer</p>
-    <div style="max-width: 680px; margin: 0 auto;">
-      <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.75; text-align: center;">
+    <div class="prose center">
+      <p>
         I build smart digital tools that merge creativity with technology. I specialize in AI development, data analytics, and cloud computing&mdash;with a focus on shipping production-grade systems. My mission: <em>build technology that understands people, and help people build better technology.</em>
       </p>
     </div>
@@ -124,14 +142,14 @@
           <span class="tag">Redis</span>
         </div>
         <div class="card-links">
-          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <span class="link-disabled" title="Live demo URL not published yet">Live demo coming soon</span>
           <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon health">H</span>
+          <span class="card-icon health" aria-hidden="true">H</span>
           <div>
             <h3>AI Health Chat</h3>
             <p>AI-powered healthcare consultation platform</p>
@@ -145,14 +163,14 @@
           <span class="tag">Grok</span>
         </div>
         <div class="card-links">
-          <a href="#" target="_blank" rel="noopener">View Live &rarr;</a>
+          <span class="link-disabled" title="Live demo URL not published yet">Live demo coming soon</span>
           <a href="https://github.com/rayklanderman" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <span class="card-icon data">M</span>
+          <span class="card-icon data" aria-hidden="true">M</span>
           <div>
             <h3>Movie Recommendation 2026</h3>
             <p>ML-powered movie rating predictor (RMSE ~0.82)</p>
@@ -201,9 +219,9 @@
   <div class="container">
     <h2 class="section-title">Stats</h2>
     <p class="section-desc">GitHub activity and coding metrics</p>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-      <img src="https://github-readme-stats.vercel.app/api?username=rayklanderman&show_icons=true&theme=default&hide_border=true" alt="GitHub Stats" style="max-width: 420px;">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rayklanderman&layout=compact&theme=default&hide_border=true" alt="Top Languages" style="max-width: 360px;">
+    <div class="stats-row">
+      <img src="https://github-readme-stats.vercel.app/api?username=rayklanderman&show_icons=true&theme=default&hide_border=true" alt="Ray Klanderman GitHub stats" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      <img class="narrow" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rayklanderman&layout=compact&theme=default&hide_border=true" alt="Top programming languages" loading="lazy" decoding="async" onerror="this.style.display='none'">
     </div>
 
   </div>
@@ -265,17 +283,41 @@
     <p>&copy; 2026 Ray Klanderman &mdash; Building technology that understands people.</p>
   </div>
 </footer>
+</main>
 
 <script>
-function toggleTheme() {
-  const html = document.documentElement;
-  const current = html.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-}
-const saved = localStorage.getItem('theme');
-if (saved) document.documentElement.setAttribute('data-theme', saved);
+(function () {
+  var html = document.documentElement;
+  var themeBtn = document.getElementById('theme-toggle');
+  function syncLabel() {
+    if (!themeBtn) return;
+    var dark = html.getAttribute('data-theme') === 'dark';
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    themeBtn.textContent = dark ? '\u2600' : '\u25D1';
+  }
+  if (themeBtn) themeBtn.addEventListener('click', function () {
+    var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    syncLabel();
+  });
+  syncLabel();
+  var menuBtn = document.getElementById('menu-toggle');
+  var links = document.getElementById('nav-links');
+  if (menuBtn && links) {
+    menuBtn.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    links.addEventListener('click', function (e) {
+      if (e.target.closest('a')) { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+})();
 </script>
 
 </body>
