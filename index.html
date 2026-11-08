@@ -1,38 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f8f3">
-  <meta name="color-scheme" content="light dark">
-  <title>Raymond (DevRay) Klanderman | Software &amp; AI Engineer</title>
-  <meta name="description" content="Meet Raymond (DevRay) Klanderman, a software and AI engineer. Explore his full portfolio, deployed projects, GitHub, LinkedIn and engineering services.">
-  <link rel="canonical" href="https://rayklanderman.github.io/">
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rayklanderman.github.io/">
-  <meta property="og:title" content="Raymond (DevRay) Klanderman | Software &amp; AI Engineer">
-  <meta property="og:description" content="Practical software and AI engineering. Explore my portfolio, projects, code, and professional profile.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Raymond (DevRay) Klanderman | Software &amp; AI Engineer">
-  <meta name="twitter:description" content="Discover my software and AI engineering work, live products, GitHub, and portfolio.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    (function () {
-      var theme = 'light';
-      try {
-        var preference = localStorage.getItem('theme');
-        if (preference === 'dark' || preference === 'light') theme = preference;
-        else if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
-      } catch (error) { /* The page works even if browser storage is disabled. */ }
-      document.documentElement.dataset.theme = theme;
-    })();
-  </script>
-  <style>
+<html lang="en" data-theme="light"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f8f3"><meta name="color-scheme" content="light dark">
+<title>Software &amp; AI Engineer | Raymond (DevRay) Klanderman</title><meta name="description" content="A concise introduction to Raymond (DevRay) Klanderman, with links to his full engineering portfolio, GitHub, project demos, LinkedIn and contact page.">
+<link rel="canonical" href="https://rayklanderman.github.io/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg">
+<meta property="og:type" content="website"><meta property="og:url" content="https://rayklanderman.github.io/">
+<meta property="og:title" content="Software &amp; AI Engineer | Raymond (DevRay) Klanderman">
+<meta property="og:description" content="A concise introduction to Raymond (DevRay) Klanderman, with links to his full engineering portfolio, GitHub, project demos, LinkedIn and contact page.">
+<meta property="og:image" content="https://raw.githubusercontent.com/rayklanderman/rayklanderman.github.io/main/images/Dev%20Tips.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(function () {
+  var theme = 'light';
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'dark' || stored === 'light') theme = stored;
+    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+  } catch (error) {}
+  document.documentElement.dataset.theme = theme;
+})();
+</script>
+<style>
     :root {
       --bg: #f7f8f3;
       --surface: #ffffff;
@@ -140,105 +131,108 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
     }
-  </style>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Raymond Klanderman",
-      "alternateName": "DevRay",
-      "jobTitle": "Software and AI Engineer",
-      "url": "https://rayklanderman.is-a.dev/",
-      "sameAs": [
-        "https://www.linkedin.com/in/rayklanderman/",
-        "https://github.com/rayklanderman",
-        "https://rayklanderman.github.io/"
-      ]
+  
+    /* Navigation and inner pages */
+    .header-actions { gap: clamp(10px, 1.5vw, 20px); }
+    .header-actions a[aria-current="page"] { color: var(--accent); }
+    .header-actions .nav-contact { color: var(--accent); }
+    .page-hero { padding-block: clamp(55px, 8vw, 96px) 44px; max-width: 820px; }
+    .breadcrumbs { font-size: .83rem; color: var(--muted); margin: 0 0 24px; }
+    .breadcrumbs a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    .page-hero h1 { margin: 12px 0 22px; }
+    .page-hero .lede { max-width: 750px; font-size: clamp(1.08rem, 2vw, 1.23rem); line-height: 1.77; color: var(--muted); }
+    .reading { max-width: 805px; }
+    .reading p { line-height: 1.87; color: var(--muted); margin-bottom: 18px; }
+    .reading strong { color: var(--text); }
+    .feature-grid, .project-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .feature-card, .project-card { background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:25px; }
+    .feature-card { min-height:195px; }
+    .feature-card .mini-index { color:var(--accent); font-weight:800; letter-spacing:.12em; font-size:.72rem; }
+    .feature-card h3 { font-size:1.14rem; margin:24px 0 8px; font-weight:600; }
+    .feature-card p, .project-card p { font-size:.9rem; line-height:1.76; color:var(--muted); margin:0; }
+    .proof-strip { margin-top:30px; padding:25px 30px; border-radius:16px; background:var(--surface-muted); border:1px solid var(--line); }
+    .proof-strip strong { display:block; font:600 1.2rem/1.3 'Outfit',sans-serif; margin-bottom:9px; }
+    .proof-strip p { margin:0; color:var(--muted); }
+    .project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .project-card { display:flex; flex-direction:column; min-height:250px; }
+    .project-top { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin-bottom:13px; }
+    .project-badge { display:inline-block; font-size:.72rem; letter-spacing:.07em; font-weight:700; color:var(--accent); }
+    .project-card h3 { font-size:1.35rem; margin:0 0 8px; font-weight:600; }
+    .project-card .stack { font-size:.76rem; color:var(--muted); margin:16px 0 22px; }
+    .project-actions { display:flex; flex-wrap:wrap; gap:16px; margin-top:auto; }
+    .project-actions a { font-size:.89rem; font-weight:700; color:var(--accent); text-decoration:none; }
+    .project-actions a:hover, .simple-links a:hover { text-decoration:underline; }
+    .simple-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .simple-links a { background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:9px 15px; text-decoration:none; font-size:.88rem; font-weight:700; }
+    .callout { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:22px; padding:28px 30px; margin-top:50px; background:var(--surface-muted); border:1px solid var(--line); border-radius:18px; }
+    .callout h2 { font-size:1.6rem; margin-bottom:6px; }
+    .callout p { margin:0; color:var(--muted); font-size:.94rem; }
+    .section-spaced { margin-top:34px; }
+    @media (max-width:880px) { .feature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:650px) {
+      .header-inner { flex-wrap:wrap; padding-block:13px; gap:10px; }
+      .header-actions { width:100%; justify-content:space-between; gap:8px; }
+      .header-actions a { font-size:.85rem; }
+      .header-actions .optional-nav { display:none; }
+      .page-hero { padding-block:49px 32px; }
+      .feature-grid,.project-grid { grid-template-columns:1fr; }
+      .feature-card { min-height:unset; }
+      .callout { padding:24px; }
+      .project-card { min-height:unset; }
     }
-  </script>
-</head>
-<body>
-  <a href="#main" class="skip">Skip to content</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Ray Klanderman, home">
-        <span class="brand-mark" aria-hidden="true">RK</span>
-        <span>Ray Klanderman</span>
-      </a>
-      <nav class="header-actions" aria-label="Quick links">
-        <a href="https://rayklanderman.is-a.dev/" class="optional-nav" target="_blank" rel="noopener noreferrer">Full portfolio ↗</a>
-        <a href="https://github.com/rayklanderman" class="optional-nav" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <button id="theme-toggle" class="theme-button" type="button" aria-label="Switch to dark mode" title="Change color theme">☾</button>
-      </nav>
-    </div>
-  </header>
-  <main id="main" class="container">
-    <section class="hero" aria-labelledby="hero-heading">
-      <div>
-        <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Software &amp; AI engineering</span>
-        <h1 id="hero-heading">Hello, I'm Raymond.<br><em>I build things that work.</em></h1>
-        <p class="hero-copy">I'm <strong>Raymond (DevRay) Klanderman</strong>, a software and AI engineer building useful applications across healthcare, education, accessibility and research. This is my quick introduction—my <strong>full portfolio</strong> contains the projects, technical case studies and professional experience.</p>
-        <div class="actions">
-          <a class="button primary" href="https://rayklanderman.is-a.dev/" target="_blank" rel="noopener noreferrer">Explore my portfolio <span aria-hidden="true">↗</span></a>
-          <a class="button secondary" href="https://github.com/rayklanderman" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
-        </div>
-        <p class="small-note">Based in Kenya · Open to engineering roles, collaboration and freelance work</p>
-      </div>
-      <aside class="showcase" aria-labelledby="showcase-title">
-        <div class="showcase-top"><span id="showcase-title" class="showcase-label">A few things I've built</span><span>LIVE APPLICATIONS</span></div>
-        <a class="showcase-item" href="https://aihealthchat.qzz.io/" target="_blank" rel="noopener noreferrer">
-          <span><strong>AI Health Chat</strong><small>Multilingual, multimodal health-information assistant</small></span><span class="external" aria-hidden="true">↗</span>
-        </a>
-        <a class="showcase-item" href="https://tutalearn.qzz.io/" target="_blank" rel="noopener noreferrer">
-          <span><strong>TutaLearn</strong><small>AI-supported learning for Kenya's CBC</small></span><span class="external" aria-hidden="true">↗</span>
-        </a>
-        <a class="showcase-item" href="https://luminae.qzz.io/" target="_blank" rel="noopener noreferrer">
-          <span><strong>Luminae</strong><small>Five-agent academic research analysis platform</small></span><span class="external" aria-hidden="true">↗</span>
-        </a>
-      </aside>
-    </section>
-    <section class="section" aria-labelledby="explore-heading">
-      <div class="section-heading">
-        <div><h2 id="explore-heading">Where would you like to go?</h2><p class="section-subtitle">The best starting points for my engineering work, background and services.</p></div>
-      </div>
-      <div class="links-grid">
-        <a class="link-card" href="https://rayklanderman.is-a.dev/" target="_blank" rel="noopener noreferrer"><span class="card-number">01 / START HERE</span><h3>Full portfolio</h3><p>Projects, case studies, experience and technical work.</p><span class="arrow" aria-hidden="true">↗</span></a>
-        <a class="link-card" href="https://github.com/rayklanderman" target="_blank" rel="noopener noreferrer"><span class="card-number">02 / ENGINEERING</span><h3>GitHub</h3><p>Public repositories, code, tools and experiments.</p><span class="arrow" aria-hidden="true">↗</span></a>
-        <a class="link-card" href="https://www.linkedin.com/in/rayklanderman/" target="_blank" rel="noopener noreferrer"><span class="card-number">03 / PROFESSIONAL</span><h3>LinkedIn</h3><p>Professional experience, connections and opportunities.</p><span class="arrow" aria-hidden="true">↗</span></a>
-        <a class="link-card" href="https://devray.qzz.io/" target="_blank" rel="noopener noreferrer"><span class="card-number">04 / WORK WITH ME</span><h3>DevRay services</h3><p>Custom AI solutions, web platforms and mobile development.</p><span class="arrow" aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-    <footer class="footer-note">
-      <p>© <span id="year">2026</span> Raymond Klanderman · Built with care and kept intentionally simple.</p>
-      <nav class="footer-links" aria-label="More ways to connect">
-        <a href="https://www.youtube.com/playlist?list=PLJa0i7fpyLmA" target="_blank" rel="noopener noreferrer">Project demos ↗</a>
-        <a href="mailto:rayklanderman@gmail.com">Email</a>
-        <a href="/resources/">Resources</a>
-      </nav>
-    </footer>
-  </main>
-  <script>
-    (function () {
-      var themeButton = document.getElementById('theme-toggle');
-      var root = document.documentElement;
-      var year = document.getElementById('year');
-      if (year) year.textContent = String(new Date().getFullYear());
-      function updateButton() {
-        var dark = root.dataset.theme === 'dark';
-        themeButton.textContent = dark ? '☀' : '☾';
-        themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-        themeButton.setAttribute('aria-pressed', String(dark));
-      }
-      if (themeButton) {
-        updateButton();
-        themeButton.addEventListener('click', function () {
-          var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-          root.dataset.theme = next;
-          try { localStorage.setItem('theme', next); } catch (error) {}
-          updateButton();
-        });
-      }
-    })();
-  </script>
-</body>
-</html>
+    @media (max-width:350px) { .header-actions { flex-wrap:wrap; } }
+</style>
+</head><body>
+<a href="#main" class="skip">Skip to content</a>
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="/" aria-current="page" aria-label="Ray Klanderman, home"><span class="brand-mark" aria-hidden="true">RK</span><span>Ray Klanderman</span></a>
+  <nav class="header-actions" aria-label="Main navigation"><a href="/about/">About</a><a href="/projects/">Projects</a><a href="/contact/" class="nav-contact">Contact</a><a href="https://rayklanderman.is-a.dev/" class="optional-nav" target="_blank" rel="noopener noreferrer">Full portfolio ↗</a><button id="theme-toggle" class="theme-button" type="button" aria-label="Switch to dark mode" title="Change color theme">☾</button></nav>
+</div></header>
+<main id="main" class="container"><section class="hero" aria-labelledby="hero-heading">
+<div><span class="eyebrow"><span class="dot" aria-hidden="true"></span> Software &amp; AI engineering</span>
+<h1 id="hero-heading">Hello, I'm Raymond.<br><em>I build things that work.</em></h1>
+<p class="hero-copy">I'm <strong>Raymond (DevRay) Klanderman</strong>, a software and AI engineer building useful applications across healthcare, education, accessibility and research. This is a quick introduction—my <strong>full portfolio</strong> contains the project case studies and professional experience.</p>
+<div class="actions"><a class="button primary" href="https://rayklanderman.is-a.dev/" target="_blank" rel="noopener noreferrer">Explore my portfolio <span aria-hidden="true">↗</span></a>
+<a class="button secondary" href="/contact/">Contact me <span aria-hidden="true">→</span></a></div>
+<p class="small-note">Based in Kenya · Open to software engineering roles and collaborations</p></div>
+<aside class="showcase" aria-labelledby="showcase-title">
+<div class="showcase-top"><span class="showcase-label" id="showcase-title">A few things I've built</span><span>LIVE APPLICATIONS</span></div>
+<a class="showcase-item" href="https://aihealthchat.qzz.io/" target="_blank" rel="noopener noreferrer"><span><strong>AI Health Chat</strong><small>Multilingual, multimodal health-information assistant</small></span><span class="external" aria-hidden="true">↗</span></a>
+<a class="showcase-item" href="https://tutalearn.qzz.io/" target="_blank" rel="noopener noreferrer"><span><strong>TutaLearn</strong><small>AI-supported learning for Kenya's CBC</small></span><span class="external" aria-hidden="true">↗</span></a>
+<a class="showcase-item" href="https://luminae.qzz.io/" target="_blank" rel="noopener noreferrer"><span><strong>Luminae</strong><small>Five-agent research-paper analysis platform</small></span><span class="external" aria-hidden="true">↗</span></a>
+</aside></section>
+<section class="section" aria-labelledby="explore-heading"><div class="section-heading"><div><h2 id="explore-heading">Find what you're looking for</h2><p class="section-subtitle">Explore my code, background and services—or browse the complete portfolio.</p></div></div>
+<div class="links-grid">
+<a class="link-card" href="https://rayklanderman.is-a.dev/" target="_blank" rel="noopener noreferrer"><span class="card-number">01 / START HERE</span><h3>Full portfolio</h3><p>Detailed case studies, experience and technical work.</p><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="link-card" href="https://github.com/rayklanderman" target="_blank" rel="noopener noreferrer"><span class="card-number">02 / CODE</span><h3>GitHub</h3><p>Public repositories, code and software experiments.</p><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="link-card" href="https://www.linkedin.com/in/rayklanderman/" target="_blank" rel="noopener noreferrer"><span class="card-number">03 / CAREER</span><h3>LinkedIn</h3><p>Professional experience, connections and opportunities.</p><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="link-card" href="https://devray.qzz.io/" target="_blank" rel="noopener noreferrer"><span class="card-number">04 / SERVICES</span><h3>DevRay</h3><p>Custom AI applications, web platforms and mobile development.</p><span class="arrow" aria-hidden="true">↗</span></a>
+</div></section><footer class="footer-note">
+<p>© <span id="year">2026</span> Raymond Klanderman · Built with care and kept intentionally simple.</p>
+<nav class="footer-links" aria-label="Additional links"><a href="/contact/">Contact</a><a href="/resources/">Resources</a><a href="https://www.youtube.com/playlist?list=PLJa0i7fpyLmA" target="_blank" rel="noopener noreferrer">Project demos ↗</a></nav>
+</footer></main>
+<script>
+(function () {
+  var root = document.documentElement;
+  var button = document.getElementById('theme-toggle');
+  var year = document.getElementById('year');
+  if (year) year.textContent = String(new Date().getFullYear());
+  function sync() {
+    if (!button) return;
+    var dark = root.dataset.theme === 'dark';
+    button.textContent = dark ? '☀' : '☾';
+    button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    button.setAttribute('aria-pressed', String(dark));
+  }
+  if (button) {
+    sync();
+    button.addEventListener('click', function () {
+      var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (error) {}
+      sync();
+    });
+  }
+})();
+</script>
+</body></html>
